@@ -20,7 +20,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 
 const Container = styled.div`
     flex: 1;
-    background-color : ${({theme}) => theme.bg};
+    background-color : ${({theme}) => theme.bgLighter};
     height: 100vh;
     color: ${({theme}) => theme.text}; 
     font-size: 13px;
@@ -73,8 +73,14 @@ const Button = styled.button`
     gap: 5px;
 `;
 
+const Title = styled.h2`
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaaaaa;
+    margin-bottom: 16px;
+`;
 
-const Menu = () => {
+const Menu = ({darkMode, setDarkMode}) => {
     return (
         <Container>
          <Wrapper>
@@ -106,9 +112,15 @@ const Menu = () => {
             <Hr /> 
             <Login>
                 Sign in to like videos, comment and subscribe!
-                <Button><AccountCircleIcon/>SIGN IN</Button>
+                <Button>
+                    <AccountCircleIcon/>
+                    SIGN IN
+                </Button>
             </Login>
             <Hr />
+            <Title>
+                MOST POPULAR
+            </Title>
             <Item>
                 <MusicNoteIcon/>
                 Music
@@ -146,7 +158,7 @@ const Menu = () => {
                 <HelpIcon/>
                 Help
             </Item>  
-            <Item>
+            <Item onClick = {() => setDarkMode(!darkMode) }>
                 <SettingsBrightnessIcon/>
                 Light Mode
             </Item>  
