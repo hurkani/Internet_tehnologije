@@ -11,6 +11,7 @@ import {
 import Home from "./pages/Home.jsx"
 import Video from "./pages/Video.jsx"
 
+
 const Container = styled.div`
   display: flex;
 `;
@@ -22,6 +23,7 @@ const Main = styled.div`
 `;
 
 const Wrapper = styled.div`
+  padding: 20px 52px;
 `;
 
 
@@ -30,7 +32,7 @@ function App() {
 
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={darkMode ? lightTheme : darkTheme}>
       <Container>
         <BrowserRouter>
           <Menu darkMode = {darkMode} setDarkMode = {setDarkMode} />
@@ -39,9 +41,9 @@ function App() {
             <Wrapper>
               <Routes>
                 <Route path="/">
-                  <Route index element = {Home} />
+                  <Route index element = {<Home/>} />
                   <Route path = "video">
-                    <Route path = ":id" element = {Video} />
+                    <Route path = ":id" element = {<Video/>} />
                   </Route>
                 </Route>
               </Routes>

@@ -17,6 +17,8 @@ import ReportIcon from '@mui/icons-material/Report'
 import HelpIcon from '@mui/icons-material/Help'
 import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+import { Link } from 'react-router-dom'
+
 
 const Container = styled.div`
     flex: 1;
@@ -83,86 +85,89 @@ const Title = styled.h2`
 const Menu = ({darkMode, setDarkMode}) => {
     return (
         <Container>
-         <Wrapper>
-            <Logo>
-                <Img src ={Bodinovklon}/>
-                Btube
-            </Logo>
-            <Item>
-                <HomeIcon/>
-                Home
-            </Item>
-            <Item>
-                <ExploreIcon/>
-                Explore
-            </Item>  
-            <Item>
-                <SubscriptionsIcon/>
-                Subscriptions
-            </Item>  
-            <Hr />
-            <Item>
-                <LibraryMusicIcon/>
-                Library
-            </Item>  
-            <Item>
-                <HistoryIcon/>
-                History
-            </Item> 
-            <Hr /> 
-            <Login>
-                Sign in to like videos, comment and subscribe!
-                <Button>
-                    <AccountCircleIcon/>
-                    SIGN IN
-                </Button>
-            </Login>
-            <Hr />
-            <Title>
-                MOST POPULAR
-            </Title>
-            <Item>
-                <MusicNoteIcon/>
-                Music
-            </Item>  
-            <Item>
-                <SportsIcon/>
-                Sports
-            </Item>  
-            <Item>
-                <GamesIcon/>
-                Gaming
-            </Item>  
-            <Item>
-                <TheatersIcon/>
-                Movies
-            </Item>  
-            <Item>
-                <NewspaperIcon/>
-                News
-            </Item>  
-            <Item>
-                <LiveTvIcon/>
-                Live
-            </Item>  
-            <Hr/>
-            <Item>
-                <SettingsIcon/>
-                Settings
-            </Item> 
-            <Item>
-                <ReportIcon/>
-                Report
-            </Item>  
-            <Item>
-                <HelpIcon/>
-                Help
-            </Item>  
-            <Item onClick = {() => setDarkMode(!darkMode) }>
-                <SettingsBrightnessIcon/>
-                Light Mode
-            </Item>  
-         </Wrapper>
+            <Wrapper>
+            <Link to = "/" style = {{textDecoration:"none", color:"inherit"}}>
+                <Logo>
+                    <Img src ={Bodinovklon}/>
+                    Btube
+                </Logo>
+            </Link> 
+                <Item>
+                    <HomeIcon/>
+                    Home
+                </Item>
+                <Item>
+                    <ExploreIcon/>
+                    Explore
+                </Item>  
+                <Item>
+                    <SubscriptionsIcon/>
+                    Subscriptions
+                </Item>  
+                <Hr />
+                <Item>
+                    <LibraryMusicIcon/>
+                    Library
+                </Item>  
+                <Item>
+                    <HistoryIcon/>
+                    History
+                </Item> 
+                <Hr /> 
+                <Login>
+                    Sign in to like videos, comment and subscribe!
+                    <Button>
+                        <AccountCircleIcon/>
+                        SIGN IN
+                    </Button>
+                </Login>
+                <Hr />
+                <Title>
+                    MOST POPULAR
+                </Title>
+                <Item>
+                    <MusicNoteIcon/>
+                    Music
+                </Item>  
+                <Item>
+                    <SportsIcon/>
+                    Sports
+                </Item>  
+                <Item>
+                    <GamesIcon/>
+                    Gaming
+                </Item>  
+                <Item>
+                    <TheatersIcon/>
+                    Movies
+                </Item>  
+                <Item>
+                    <NewspaperIcon/>
+                    News
+                </Item>  
+                <Item>
+                    <LiveTvIcon/>
+                    Live
+                </Item>  
+                <Hr/>
+                <Item>
+                    <SettingsIcon/>
+                    Settings
+                </Item> 
+                <Item>
+                    <ReportIcon/>
+                    Report
+                </Item>  
+                <Item>
+                    <HelpIcon/>
+                    Help
+                </Item>  
+                <Item onClick = {() => setDarkMode(!darkMode) }>
+                    <SettingsBrightnessIcon/>
+                    {darkMode ? "Light" : "Dark"} Mode
+                </Item> 
+            
+            </Wrapper>
         </Container>
     )
 
