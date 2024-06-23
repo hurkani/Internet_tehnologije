@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home.jsx"
 import Video from "./pages/Video.jsx"
+import SignIn from "./pages/Signin.jsx"
+
 
 
 const Container = styled.div`
@@ -41,9 +43,10 @@ function App() {
             <Wrapper>
               <Routes>
                 <Route path="/">
-                  <Route index element = {<Home/>} />
+                  <Route index element = {<Home />} />
+                  <Route path = "signin" element = {<SignIn />} />
                   <Route path = "video">
-                    <Route path = ":id" element = {<Video/>} />
+                    <Route path = ":id" element = {<Video />} />
                   </Route>
                 </Route>
               </Routes>

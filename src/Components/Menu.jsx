@@ -49,9 +49,13 @@ const Img = styled.img`
 const Item = styled.div`
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     cursor: pointer;
     padding: 3px 0px;
+
+    &:hover{
+        backgrouns-color: ${({ theme }) => theme.soft};
+    }
 `;
 
 const Hr = styled.hr`
@@ -116,10 +120,12 @@ const Menu = ({darkMode, setDarkMode}) => {
                 <Hr /> 
                 <Login>
                     Sign in to like videos, comment and subscribe!
-                    <Button>
-                        <AccountCircleIcon/>
-                        SIGN IN
-                    </Button>
+                    <Link to = "signin" style = {{textDecoration: "none" }}>
+                        <Button>
+                            <AccountCircleIcon/>
+                            SIGN IN
+                        </Button>
+                    </Link>
                 </Login>
                 <Hr />
                 <Title>

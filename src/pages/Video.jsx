@@ -2,6 +2,8 @@ import { AddTaskOutlined, ReplyOutlined, ThumbDownOffAltOutlined, ThumbUpOutline
 import React from "react"
 import styled from "styled-components"
 import ayanokoji from '../img/ayanokoji.jpg'
+import Comments from "../Components/Comments";
+import Card  from "../Components/Card";
 
 
 
@@ -73,7 +75,14 @@ const ChannelInfo = styled.div`
 `;
 
 const Subscribe = styled.button`
-
+    background-color: #0000FF;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    height: max-content;
+    padding: 10px 20px;
+    cursor: pointer;
 `;
 
 const Image = styled.img`
@@ -97,10 +106,12 @@ const ChannelCounter = styled.span`
     margin-top: 5px;
     margin-bottom: 20px;
     color: ${({ theme }) => theme.textSoft};
+    font-size: 12px;
 `;
 
 const Description = styled.p`
-    
+    font-size: 14px;
+
 `;
 
 
@@ -151,8 +162,19 @@ const Video = () => {
                     </ChannelInfo>
                     <Subscribe>SUBSCRIBE</Subscribe>
                 </Channel>
+                <Hr />
+                <Comments />
             </Content>  
-            <Recommendation> recommendation </Recommendation>       
+            <Recommendation> 
+                <Card type="sm"/> 
+                <Card type="sm"/> 
+                <Card type="sm"/> 
+                <Card type="sm"/> 
+                <Card type="sm"/> 
+                <Card type="sm"/> 
+                <Card type="sm"/> 
+                <Card type="sm"/> 
+            </Recommendation>       
           
         </Container>
     )
